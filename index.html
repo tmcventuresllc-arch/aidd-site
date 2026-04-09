@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Digital Disruptors — AI Search Visibility for Small Business</title>
+<meta name="description" content="We help small businesses get found by ChatGPT, Perplexity, and Google AI. Free audit.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:#0a0f1e;background:#fff;}
+.ah{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid #eef0f5;}
+.ah-in{max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.al{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.al-ic{width:34px;height:34px;background:#0057FF;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.al-tx{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:#0a0f1e;}
+.al-sb{font-size:10px;color:#9ba8c0;letter-spacing:.08em;text-transform:uppercase;}
+.an{display:flex;align-items:center;gap:28px;}
+.an a{font-size:14px;font-weight:500;color:#4a5568;text-decoration:none;}
+.an a:hover{color:#0057FF;}
+.ac{background:#0057FF;color:#fff!important;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;}
+.abg{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.amob{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-top:1px solid #eef0f5;padding:20px 32px;z-index:199;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.amob.open{display:block;}
+.amob a{display:block;padding:10px 0;border-bottom:1px solid #f0f2f5;font-size:15px;color:#4a5568;text-decoration:none;}
+.amob .ac{display:block;text-align:center;margin-top:10px;border-bottom:none;}
+@media(max-width:768px){.an{display:none;}.abg{display:block;}.ah-in{padding:0 20px;}}
+.hero{background:#fff;padding:80px 32px 64px;text-align:center;position:relative;overflow:hidden;}
+.hgr{position:absolute;inset:0;background-image:linear-gradient(rgba(0,87,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,87,255,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;}
+.hin{max-width:800px;margin:0 auto;position:relative;z-index:1;}
+.bdg{display:inline-flex;align-items:center;gap:7px;background:#EEF3FF;color:#0057FF;font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:24px;border:1px solid #B5D4F4;letter-spacing:.02em;text-transform:uppercase;}
+.bdg-d{width:7px;height:7px;background:#0057FF;border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.85);}}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,6vw,56px);font-weight:800;color:#0a0f1e;letter-spacing:-.03em;line-height:1.1;margin-bottom:22px;}
+.hero h1 .bl{color:#0057FF;}
+.hero-sub{font-size:18px;color:#4a5568;line-height:1.65;margin-bottom:36px;max-width:580px;margin-left:auto;margin-right:auto;}
+.brow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+.bp{background:#0057FF;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;padding:14px 28px;border-radius:9px;border:none;cursor:pointer;text-decoration:none;display:inline-block;}
+.bp:hover{background:#0046d4;}
+.bs{background:transparent;color:#0057FF;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;padding:14px 28px;border-radius:9px;border:2px solid #0057FF;cursor:pointer;text-decoration:none;display:inline-block;}
+.bs:hover{background:#EEF3FF;}
+.srow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:680px;margin:0 auto;}
+.scard{background:#F4F6FB;border-radius:12px;padding:18px 16px;text-align:center;border:1px solid #eef0f5;}
+.snum{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#0057FF;letter-spacing:-.02em;line-height:1.1;}
+.slbl{font-size:12px;color:#6B7B9A;margin-top:5px;line-height:1.4;}
+@media(max-width:600px){.hero{padding:56px 20px 48px;}.srow{grid-template-columns:1fr;}}
+.ch{padding:80px 32px;background:#fff;border-top:1px solid #eef0f5;}
+.ch-in{max-width:960px;margin:0 auto;}
+.stag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0057FF;margin-bottom:12px;}
+.sttl{font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;color:#0a0f1e;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px;}
+.ssub{font-size:16px;color:#4a5568;line-height:1.65;margin-bottom:36px;max-width:640px;}
+.ccard{background:#F4F6FB;border-radius:16px;padding:28px 28px 20px;border:1px solid #eef0f5;}
+.cleg{display:flex;gap:24px;margin-bottom:20px;flex-wrap:wrap;}
+.cleg span{display:flex;align-items:center;gap:7px;font-size:13px;color:#4a5568;font-weight:500;}
+.ldot{width:12px;height:12px;border-radius:3px;flex-shrink:0;}
+.cwrap{position:relative;width:100%;height:300px;}
+.csrc{font-size:11px;color:#9ba8c0;text-align:right;margin-top:12px;}
+@media(max-width:600px){.ch{padding:56px 20px;}.cwrap{height:220px;}}
+.sv{padding:80px 32px;background:#0a0f1e;}
+.sv-in{max-width:1100px;margin:0 auto;}
+.svgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+.svcd{background:#111827;border:1px solid #1e2d4a;border-radius:14px;padding:28px 26px;transition:border-color .2s;}
+.svcd:hover{border-color:#0057FF;}
+.svic{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.svtt{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;}
+.svds{font-size:14px;color:#7a8fad;line-height:1.65;}
+.svbg{display:inline-block;margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;}
+@media(max-width:600px){.sv{padding:56px 20px;}.svgr{grid-template-columns:1fr;}}
+.st{padding:80px 32px;background:#F4F6FB;border-top:1px solid #eef0f5;border-bottom:1px solid #eef0f5;}
+.st-in{max-width:1000px;margin:0 auto;text-align:center;}
+.sdiv{width:40px;height:3px;background:#0057FF;border-radius:2px;margin:10px auto 32px;}
+.ssb2{font-size:16px;color:#4a5568;line-height:1.65;margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto;}
+.pgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.pcd{background:#fff;border-radius:14px;padding:28px 20px;border:1px solid #eef0f5;}
+.pnm{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:#0057FF;letter-spacing:-.03em;line-height:1;margin-bottom:10px;}
+.plb{font-size:13px;color:#4a5568;line-height:1.5;}
+@media(max-width:600px){.st{padding:56px 20px;}.pgr{grid-template-columns:repeat(2,1fr);}.pnm{font-size:28px;}}
+.ct{padding:96px 32px;background:#fff;text-align:center;}
+.ct-in{max-width:600px;margin:0 auto;}
+.ctsb{font-size:16px;color:#4a5568;line-height:1.65;margin-bottom:36px;}
+form.af{display:flex;flex-direction:column;gap:14px;text-align:left;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{display:flex;flex-direction:column;gap:6px;}
+.fg label{font-size:13px;font-weight:600;color:#0a0f1e;}
+.fg input,.fg select,.fg textarea{font-family:'DM Sans',sans-serif;font-size:14px;color:#0a0f1e;background:#F4F6FB;border:1.5px solid #e2e8f0;border-radius:9px;padding:12px 14px;width:100%;outline:none;box-sizing:border-box;-webkit-appearance:none;transition:border-color .15s;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#0057FF;}
+.fg textarea{resize:vertical;min-height:100px;}
+.fsub{background:#0057FF;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;padding:15px 32px;border-radius:9px;border:none;cursor:pointer;width:100%;margin-top:4px;}
+.fsub:hover{background:#0046d4;}
+.fnt{font-size:12px;color:#9ba8c0;text-align:center;margin-top:6px;}
+@media(max-width:600px){.ct{padding:64px 20px;}.fr{grid-template-columns:1fr;}}
+.ft{background:#0a0f1e;padding:48px 32px 32px;border-top:1px solid #1e2d4a;}
+.ft-in{max-width:1200px;margin:0 auto;}
+.ftt{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid #1e2d4a;margin-bottom:28px;}
+.fbr{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.fic{width:34px;height:34px;background:#0057FF;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.fbt{font-size:14px;font-weight:700;color:#fff;}
+.fbs{font-size:11px;color:#4a5f80;letter-spacing:.08em;text-transform:uppercase;}
+.ftg{font-size:13px;color:#4a5f80;margin-top:14px;max-width:260px;line-height:1.55;}
+.fls{display:flex;gap:48px;flex-wrap:wrap;}
+.fct{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:14px;}
+.fcl a{display:block;font-size:13px;color:#4a5f80;text-decoration:none;margin-bottom:9px;}
+.fcl a:hover{color:#0057FF;}
+.fbt2{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.fcp{font-size:12px;color:#2d3f5a;}
+.flg{display:flex;gap:20px;}
+.flg a{font-size:12px;color:#2d3f5a;text-decoration:none;}
+@media(max-width:600px){.ft{padding:40px 20px 24px;}.ftt{flex-direction:column;}.fls{gap:28px;}}
+</style>
+</head>
+<body>
+<header class="ah">
+<div class="ah-in">
+<a href="/" class="al"><div class="al-ic"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="3" fill="white"/><path d="M9 2v2M9 14v2M2 9h2M14 9h2" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><div class="al-tx">AI Digital Disruptors</div><div class="al-sb">Powering small business</div></div></a>
+<nav class="an"><a href="#services">Services</a><a href="#why-ai">Why AI</a><a href="#stats">Results</a><a href="#contact">Contact</a><a href="#contact" class="ac">Get a free audit</a></nav>
+<button class="abg" onclick="document.getElementById('amob').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#0a0f1e" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+</div>
+<div class="amob" id="amob"><a href="#services" onclick="document.getElementById('amob').classList.remove('open')">Services</a><a href="#why-ai" onclick="document.getElementById('amob').classList.remove('open')">Why AI</a><a href="#stats" onclick="document.getElementById('amob').classList.remove('open')">Results</a><a href="#contact" onclick="document.getElementById('amob').classList.remove('open')">Contact</a><a href="#contact" class="ac" onclick="document.getElementById('amob').classList.remove('open')">Get a free audit</a></div>
+</header>
+<section class="hero">
+<div class="hgr"></div>
+<div class="hin">
+<div class="bdg"><span class="bdg-d"></span>AI search is here — now</div>
+<h1>Your customers are<br><span class="bl">searching differently.</span><br>Is your business showing up?</h1>
+<p class="hero-sub">AI search is growing 150% year over year. We help small businesses build the web presence they need to get found today — and stay found tomorrow.</p>
+<div class="brow"><a href="#contact" class="bp">Get a free audit</a><a href="#services" class="bs">See what we do</a></div>
+<div class="srow">
+<div class="scard"><div class="snum">150%</div><div class="slbl">AI search traffic growth, year over year</div></div>
+<div class="scard"><div class="snum">14.2%</div><div class="slbl">AI search conversion rate vs Google's 2.8%</div></div>
+<div class="scard"><div class="snum">5x</div><div class="slbl">More likely to convert from AI-driven visits</div></div>
+</div>
+</div>
+</section>
+<section class="ch" id="why-ai">
+<div class="ch-in">
+<div class="stag">Why AI search</div>
+<div class="sttl">AI search is on track to overtake traditional search</div>
+<p class="ssub">Combined traffic to AI platforms grew 416% year over year. Google's market share fell below 90% for the first time since 2015. The shift is happening — is your business ready?</p>
+<div class="ccard">
+<div class="cleg"><span><span class="ldot" style="background:#9ba8c0;"></span>Google search (billions of monthly visits)</span><span><span class="ldot" style="background:#0057FF;"></span>AI search combined (billions of monthly visits)</span></div>
+<div class="cwrap"><canvas id="aidd-chart"></canvas></div>
+<div class="csrc">Sources: Similarweb, Wix AI Search Lab &middot; 2024&ndash;2025 actual, 2026 projected</div>
+</div>
+</div>
+</section>
+<section class="sv" id="services">
+<div class="sv-in">
+<div class="stag" style="color:#00C9A7;">What we do</div>
+<div class="sttl" style="color:#fff;margin-bottom:12px;">Everything your business needs to win in the AI era</div>
+<p class="ssub" style="color:#8899bb;margin-bottom:48px;">We build the digital foundation small businesses are missing — then optimize it for where your customers are already searching.</p>
+<div class="svgr">
+<div class="svcd"><div class="svic" style="background:#0d1f3c;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="2" stroke="#0057FF" stroke-width="1.6"/><path d="M7 11h8M7 7h8M7 15h5" stroke="#0057FF" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="svtt">New website build</div><div class="svds">A fast, modern website designed to convert visitors into customers — built to load fast, rank well, and make your phone ring.</div><span class="svbg" style="background:#0d1f3c;color:#0057FF;">Foundation</span></div>
+<div class="svcd"><div class="svic" style="background:#0a2218;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#00C9A7" stroke-width="1.6"/><path d="M11 7v4l3 3" stroke="#00C9A7" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="svtt">AI search optimization</div><div class="svds">Get your business cited by ChatGPT, Perplexity, and Google AI — where your next customers are already looking.</div><span class="svbg" style="background:#0a2218;color:#00C9A7;">Most in demand</span></div>
+<div class="svcd"><div class="svic" style="background:#1a1008;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3C6.58 3 3 6.58 3 11s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z" stroke="#f59e0b" stroke-width="1.6"/><path d="M11 7v4M11 15h.01" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="svtt">Local SEO &amp; visibility</div><div class="svds">Show up when someone nearby searches for what you offer — on Google Maps, in AI answers, and across every major platform.</div><span class="svbg" style="background:#1a1008;color:#f59e0b;">Local power</span></div>
+<div class="svcd"><div class="svic" style="background:#0a2218;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 4l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" stroke="#00C9A7" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div class="svtt">Online reputation setup</div><div class="svds">Reviews, Google Business Profile, and social presence — all the trust signals AI tools and customers look for before they buy.</div><span class="svbg" style="background:#0a2218;color:#00C9A7;">Trust building</span></div>
+<div class="svcd"><div class="svic" style="background:#0d1f3c;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 17l4-4 4 4 6-10" stroke="#0057FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="svtt">Transaction flow optimization</div><div class="svds">Turn traffic into booked appointments, quote requests, and real sales — with flows built to remove every point of friction.</div><span class="svbg" style="background:#0d1f3c;color:#0057FF;">Revenue driver</span></div>
+<div class="svcd"><div class="svic" style="background:#1a1008;"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 12h4l3-8 4 16 3-8h4" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="svtt">Ongoing AI strategy</div><div class="svds">The AI landscape changes fast. We keep your presence current so you never fall behind as the tools evolve.</div><span class="svbg" style="background:#1a1008;color:#f59e0b;">Retention</span></div>
+</div>
+</div>
+</section>
+<section class="st" id="stats">
+<div class="st-in">
+<div class="stag">By the numbers</div>
+<div class="sttl">Why AI presence matters right now</div>
+<div class="sdiv"></div>
+<p class="ssb2">These aren't projections. This is what's happening to search right now — and most small businesses have no idea.</p>
+<div class="pgr">
+<div class="pcd"><div class="pnm">416%</div><div class="plb">Average yearly growth in AI search platform traffic</div></div>
+<div class="pcd"><div class="pnm">93%</div><div class="plb">Of AI Mode searches end without a click — unless you're the cited answer</div></div>
+<div class="pcd"><div class="pnm">50%</div><div class="plb">Of consumers now use AI search tools to find businesses</div></div>
+<div class="pcd"><div class="pnm">70%</div><div class="plb">Of Gen Z and Millennials use AI as their primary source of information</div></div>
+</div>
+</div>
+</section>
+<section class="ct" id="contact">
+<div class="ct-in">
+<div class="stag">Ready to get started?</div>
+<div class="sttl">Find out how visible your business really is</div>
+<p class="ctsb">Fill out the form and we'll send you a free AI search visibility audit — no sales pitch, just the truth about where you stand.</p>
+<form class="af" action="https://formspree.io/f/xblyrwgq" method="POST">
+<div class="fr">
+<div class="fg"><label>First name</label><input type="text" name="first_name" placeholder="Jane" required></div>
+<div class="fg"><label>Last name</label><input type="text" name="last_name" placeholder="Smith" required></div>
+</div>
+<div class="fg"><label>Email address</label><input type="email" name="email" placeholder="jane@yourbusiness.com" required></div>
+<div class="fg"><label>Business name</label><input type="text" name="business" placeholder="Jane's Plumbing Co." required></div>
+<div class="fg"><label>Current website (optional)</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
+<div class="fg"><label>What do you need most?</label><select name="service"><option value="">Select a service...</option><option>New website build</option><option>AI search optimization</option><option>Local SEO and visibility</option><option>Online reputation setup</option><option>Transaction flow optimization</option><option>Ongoing AI strategy</option><option>Not sure — audit everything</option></select></div>
+<div class="fg"><label>Anything else we should know?</label><textarea name="message" placeholder="Tell us about your business and your biggest challenge right now..."></textarea></div>
+<button type="submit" class="fsub">Get my free audit</button>
+<p class="fnt">No commitment required. We'll respond within 1 business day.</p>
+</form>
+</div>
+</section>
+<footer class="ft">
+<div class="ft-in">
+<div class="ftt">
+<div><a href="/" class="fbr"><div class="fic"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="3" fill="white"/><path d="M9 2v2M9 14v2M2 9h2M14 9h2" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><div class="fbt">AI Digital Disruptors</div><div class="fbs">Powering small business</div></div></a><p class="ftg">We help small businesses build the AI-ready digital presence they need to compete and win.</p></div>
+<div class="fls"><div class="fcl"><div class="fct">Services</div><a href="#services">Website build</a><a href="#services">AI search optimization</a><a href="#services">Local SEO</a><a href="#services">Reputation setup</a><a href="#services">AI strategy</a></div><div class="fcl"><div class="fct">Company</div><a href="#why-ai">Why AI search</a><a href="#stats">By the numbers</a><a href="#contact">Free audit</a><a href="#contact">Contact us</a></div></div>
+</div>
+<div class="fbt2"><div class="fcp">&copy; 2026 AI Digital Disruptors. All rights reserved.</div><div class="flg"><a href="/privacy">Privacy policy</a><a href="/terms">Terms of service</a></div></div>
+</div>
+</footer>
+<script>
+(function(){var labels=["Aug 2023","Nov 2023","Feb 2024","May 2024","Aug 2024","Nov 2024","Feb 2025","May 2025","Aug 2025","Jan 2026*","Aug 2026*"];var google=[82.1,82.4,82.7,83.0,83.2,83.5,83.5,83.6,83.9,83.8,83.5];var ai=[0.5,0.8,1.2,2.0,3.5,4.8,5.5,6.5,7.5,9.5,14.0];new Chart(document.getElementById("aidd-chart"),{type:"line",data:{labels:labels,datasets:[{label:"Google",data:google,borderColor:"#9ba8c0",backgroundColor:"rgba(155,168,192,0.07)",borderWidth:2,pointRadius:4,pointBackgroundColor:"#9ba8c0",tension:0.35,fill:true},{label:"AI",data:ai,borderColor:"#0057FF",backgroundColor:"rgba(0,87,255,0.07)",borderWidth:2.5,pointRadius:4,pointBackgroundColor:"#0057FF",tension:0.4,fill:true}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:11},color:"#9ba8c0",maxRotation:35,autoSkip:true,maxTicksLimit:7},grid:{color:"rgba(155,168,192,0.15)"},border:{display:false}},y:{min:0,max:100,ticks:{font:{size:11},color:"#9ba8c0",callback:function(v){return v+"B"}},grid:{color:"rgba(155,168,192,0.15)"},border:{display:false}}}}});})();
+</script>
+</body>
+</html>
